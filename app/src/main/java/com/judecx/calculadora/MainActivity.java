@@ -78,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
         valor = String.valueOf(imprimir.getText());
     }
 
+    public void borrar(View view){
+        //valor = valor.length();
+        //int m = Math.max(0, valor.length() - 1);
+        valor = valor.substring(0, valor.length() - 1);
+    }
+
     public void eliminar(View view){
         valor ="";
         nUno = 0.0;

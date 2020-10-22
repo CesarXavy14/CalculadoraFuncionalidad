@@ -50,10 +50,11 @@
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text=""
+                android:text="@string/flecha"
                 android:textSize="60sp"
                 android:gravity="top"
                 android:textColor="@color/colorWhite"
+                android:onClick="borrar"
                 >
             </TextView>
             <TextView

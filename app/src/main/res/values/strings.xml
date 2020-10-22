@@ -18,4 +18,5 @@
     <string name="borrar">C</string>
     <string name="eliminar">←</string>
     <string name="punto">.</string>
+    <string name="flecha">◄-</string>
 </resources>
