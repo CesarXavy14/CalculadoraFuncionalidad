@@ -78,10 +78,16 @@ public class MainActivity extends AppCompatActivity {
         valor = String.valueOf(imprimir.getText());
     }
 
+    @SuppressLint("SetTextI18n")
     public void borrar(View view){
         //valor = valor.length();
         //int m = Math.max(0, valor.length() - 1);
         valor = valor.substring(0, valor.length() - 1);
+        if  (nUno == 0){
+            imprimir.setText(valor);
+        }else{
+            imprimir.setText(nUno.toString()+signo+valor);
+        }
     }
 
     public void eliminar(View view){
