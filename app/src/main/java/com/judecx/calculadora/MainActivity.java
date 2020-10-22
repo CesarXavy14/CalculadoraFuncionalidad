@@ -80,25 +80,33 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void borrar(View view){
-            if  (nUno == 0){
-                valor = valor.substring(0, valor.length() - 1);
-                imprimir.setText(valor);
+            if(imprimir.getText().length() == 0){
+                valor ="";
+                nUno = 0.0;
+                nDos = 0.0;
+                resultado = 0.0;
+                imprimir.setText("");
             }else{
-                if(signo == "+" || signo == "-" || signo == "x" || signo == "÷"){
-                    if(valor.length() == 0){
+                if  (nUno == 0){
+                    valor = valor.substring(0, valor.length() - 1);
+                    imprimir.setText(valor);
+                }else{
+                    if(signo.equals("+") || signo.equals("-") || signo.equals("x") || signo.equals("÷")){
+                        if(valor.length() == 0){
+                            signo = "";
+                            valor = String.valueOf(nUno);
+                            imprimir.setText(valor);
+                            nUno = 0.0;
+                        }else{
+                            valor = valor.substring(0, valor.length() - 1);
+                            imprimir.setText(nUno.toString()+signo+valor);
+                        }
+                    }else{
                         signo = "";
                         valor = String.valueOf(nUno);
                         imprimir.setText(valor);
                         nUno = 0.0;
-                    }else{
-                        valor = valor.substring(0, valor.length() - 1);
-                        imprimir.setText(nUno.toString()+signo+valor);
                     }
-                }else{
-                    signo = "";
-                    valor = String.valueOf(nUno);
-                    imprimir.setText(valor);
-                    nUno = 0.0;
                 }
             }
     }
