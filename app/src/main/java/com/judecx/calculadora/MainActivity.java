@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         imprimir.setText(nUno.toString()+signo);
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         imprimir.setText(resultado.toString());
+        valor = String.valueOf(imprimir.getText());
     }
 
     public void eliminar(View view){
