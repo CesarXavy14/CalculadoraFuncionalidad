@@ -59,23 +59,24 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void resultado(View view){
-        nDos = Double.parseDouble(valor);
-        switch (signo){
-            case "+":
-                resultado = nUno+nDos;
-                break;
-            case "-":
-                resultado = nUno-nDos;
-                break;
-            case "x":
-                resultado = nUno*nDos;
-                break;
-            case "÷":
-                resultado = nUno/nDos;
-                break;
-        }
-        imprimir.setText(resultado.toString());
-        valor = String.valueOf(imprimir.getText());
+
+            nDos = Double.parseDouble(valor);
+            switch (signo){
+                case "+":
+                    resultado = nUno+nDos;
+                    break;
+                case "-":
+                    resultado = nUno-nDos;
+                    break;
+                case "x":
+                    resultado = nUno*nDos;
+                    break;
+                case "÷":
+                    resultado = nUno/nDos;
+                    break;
+            }
+            imprimir.setText(resultado.toString());
+            valor = String.valueOf(imprimir.getText());
     }
 
     @SuppressLint("SetTextI18n")
